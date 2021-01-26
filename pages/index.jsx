@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import { useRouter } from 'next/router';
+import { NextSeo } from 'next-seo';
 export default function Home() {
   const { push } = useRouter();
   return (
@@ -8,7 +9,15 @@ export default function Home() {
       <Head>
         <title>PR Bot</title>
       </Head>
-
+      <NextSeo
+        title='PRBot'
+        description='The Slack bot for open source maintainers and teams.'
+        openGraph={{
+          url: 'https://prbot.vercel.app',
+          title: 'PRBot',
+        }}
+        twitter={{ cardType: 'summary_large_image' }}
+      />
       <main className={styles.main}>
         <h1 className={styles.title}>
           PR Bot - The Slack bot for open source maintainers and public teams.
