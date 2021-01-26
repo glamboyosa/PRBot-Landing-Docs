@@ -8,3 +8,4 @@ const Redirect = () => (
     <h1>Page for redirection</h1>
   </div>
 );
+export default Redirect;
