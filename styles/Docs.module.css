@@ -1,0 +1,35 @@
+.container {
+  min-height: 100vh;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.marginutility {
+  margin: 1rem 0;
+}
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.title,
+.description {
+  text-align: center;
+}
+
+.description {
+  line-height: 1.5;
+  font-size: 2rem;
+}
+.description li {
+  list-style: square;
+}
+.description li::before {
+  content: '-';
+  margin-right: 1rem;
+  font-size: 3rem;
+  font-weight: bold;
+}

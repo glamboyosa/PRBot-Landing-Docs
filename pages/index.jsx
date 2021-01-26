@@ -21,7 +21,7 @@ export default function Home() {
           Simply mention it with the repo and get daily alerts.
         </p>
         <div className={styles.grid}>
-          <button className={styles.button} onClick={() => push('/')}>
+          <button className={styles.button} onClick={() => push('/docs')}>
             Get Started
           </button>
           <a
