@@ -11,7 +11,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          The Slack bot for open source maintainers and public teams.
+          PR Bot - The Slack bot for open source maintainers and public teams.
         </h1>
         <p className={[styles.description, styles.marginutility].join(' ')}>
           PR Bot is a Slack bot that curates daily open, pending PRs on your
