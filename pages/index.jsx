@@ -34,7 +34,7 @@ export default function Home() {
             Get Started
           </button>
           <a
-            href='https://slack.com/oauth/v2/authorize?scope=incoming-webhook&client_id=1249778687317.1677318801844'
+            href='https://slack.com/oauth/v2/authorize?client_id=1249778687317.1677318801844&scope=app_mentions:read,chat:write,im:history,chat:write.public,channels:join&user_scope='
             target='_blank'
           >
             <img
@@ -42,7 +42,7 @@ export default function Home() {
               height='40'
               width='139'
               src='https://platform.slack-edge.com/img/add_to_slack.png'
-              srcset='https://platform.slack-edge.com/img/add_to_slack.png 1x, https://platform.slack-edge.com/img/add_to_slack@2x.png 2x'
+              srcSet='https://platform.slack-edge.com/img/add_to_slack.png 1x, https://platform.slack-edge.com/img/add_to_slack@2x.png 2x'
             />
           </a>
         </div>

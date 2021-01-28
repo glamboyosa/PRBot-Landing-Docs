@@ -26,6 +26,9 @@ const Redirect = ({ client_id, client_secret }) => {
   if (response) {
     return (
       <div className={styles.container}>
+        <Head>
+          <title>Succesful redirection</title>
+        </Head>
         <h1>Integration added to slack</h1>
       </div>
     );
