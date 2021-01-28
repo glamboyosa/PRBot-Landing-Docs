@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "mey": "^1.0.7",
     "next": "10.0.5",
     "next-seo": "^4.17.0",
     "react": "17.0.1",
