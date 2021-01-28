@@ -2,8 +2,6 @@ import { useEffect } from 'react';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 const Redirect = ({ client_id, client_secret }) => {
-  console.log(client_id);
-  console.log(client_secret);
   useEffect(() => {
     if (window.location.search.split('=')[1]) {
       fetch('https://slack.com/api/oauth.access', {
