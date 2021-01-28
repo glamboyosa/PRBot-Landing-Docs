@@ -8,7 +8,7 @@ const Redirect = ({ client_id, client_secret }) => {
         body: new URLSearchParams({
           client_id,
           client_secret,
-          code: window.location.search.split('=')[1],
+          code: window.location.search.split('=')[1].split('&')[0],
         }),
         method: 'POST',
         headers: {
