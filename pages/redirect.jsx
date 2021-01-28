@@ -1,7 +1,8 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 const Redirect = ({ client_id, client_secret }) => {
+  const [response, setResponse] = useState();
   useEffect(() => {
     if (window.location.search.split('=')[1]) {
       fetch('https://slack.com/api/oauth.v2.access', {
@@ -16,10 +17,19 @@ const Redirect = ({ client_id, client_secret }) => {
         },
       })
         .then((resp) => resp.json())
-        .then((resp) => console.log(resp))
+        .then((resp) => {
+          setResponse(resp.ok);
+        })
         .catch((err) => console.log(err.message));
     }
   }, []);
+  if (response) {
+    return (
+      <div className={styles.container}>
+        <h1>Integration added to slack</h1>
+      </div>
+    );
+  }
   return (
     <div className={styles.container}>
       <Head>

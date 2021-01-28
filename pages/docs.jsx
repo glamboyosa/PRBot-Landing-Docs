@@ -14,7 +14,7 @@ const Docs = () => (
         <li>
           <a
             style={{ color: 'black' }}
-            href='https://slack.com/oauth/v2/authorize?client_id=1249778687317.1677318801844&scope=app_mentions:read,chat:write,im:history&user_scope='
+            href='https://slack.com/oauth/v2/authorize?client_id=1249778687317.1677318801844&scope=app_mentions:read,chat:write,im:history,chat:write.public,channels:join&user_scope='
             target='_blank'
           >
             Share with your workspace
