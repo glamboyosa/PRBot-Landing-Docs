@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css';
 const Redirect = ({ client_id, client_secret }) => {
   useEffect(() => {
     if (window.location.search.split('=')[1]) {
-      fetch('https://slack.com/api/oauth.access', {
+      fetch('https://slack.com/api/oauth.v2.access', {
         body: new URLSearchParams({
           client_id,
           client_secret,
