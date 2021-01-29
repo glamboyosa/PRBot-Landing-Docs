@@ -18,6 +18,7 @@ const Redirect = ({ client_id, client_secret }) => {
       })
         .then((resp) => resp.json())
         .then((resp) => {
+          console.log(resp);
           setResponse(resp.ok);
         })
         .catch((err) => console.log(err.message));
