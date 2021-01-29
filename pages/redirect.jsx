@@ -3,6 +3,7 @@ import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 const Redirect = ({ client_id, client_secret }) => {
   const [response, setResponse] = useState();
+  const [success, setSuccess] = useState();
   useEffect(() => {
     if (window.location.search.split('=')[1]) {
       fetch('https://slack.com/api/oauth.v2.access', {
@@ -18,13 +19,17 @@ const Redirect = ({ client_id, client_secret }) => {
       })
         .then((resp) => resp.json())
         .then((resp) => {
-          console.log(resp);
           setResponse(resp.ok);
+          fetch(
+            `https://prbot-slack.herokuapp.com/?code=${resp.access_token}&channel_id=${resp.channel_id}`
+          )
+            .then((resp) => resp.json())
+            .then((resp) => setSuccess(resp.success));
         })
         .catch((err) => console.log(err.message));
     }
   }, []);
-  if (response) {
+  if (response && success) {
     return (
       <div className={styles.container}>
         <Head>
