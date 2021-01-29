@@ -21,7 +21,7 @@ const Redirect = ({ client_id, client_secret }) => {
         .then((resp) => {
           setResponse(resp.ok);
           fetch(
-            `https://prbot-slack.herokuapp.com/?code=${resp.access_token}&channel_id=${resp.incoming_webhook.channel_id}`
+            `https://prbot-slack.herokuapp.com/access-token?code=${resp.access_token}&channel_id=${resp.incoming_webhook.channel_id}`
           )
             .then((resp) => resp.json())
             .then((resp) => setSuccess(resp.success));
