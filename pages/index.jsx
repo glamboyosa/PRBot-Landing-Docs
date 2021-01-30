@@ -27,7 +27,7 @@ export default function Home() {
           repos.
         </p>
         <p className={[styles.description, styles.marginutility].join(' ')}>
-          Simply mention it with the repo and get daily alerts.
+          Simply mention it with the Github repo and get daily alerts.
         </p>
         <div className={styles.grid}>
           <button className={styles.button} onClick={() => push('/docs')}>
